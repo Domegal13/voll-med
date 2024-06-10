@@ -1,0 +1,13 @@
+package med.vollmed.apiVollMed;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ApiVollMedApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ApiVollMedApplication.class, args);
+	}
+
+}
