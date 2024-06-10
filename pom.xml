@@ -94,7 +94,7 @@
 				<configuration>
 					<url>jdbc:mysql://localhost/vollmed</url>
 					<user>root</user>
-					<password>Vida133117</password>
+					<password>DB_PASSWORD</password>
 					<locations>
 						<location>filesystem:src/main/resources/db/migration</location>
 					</locations>
