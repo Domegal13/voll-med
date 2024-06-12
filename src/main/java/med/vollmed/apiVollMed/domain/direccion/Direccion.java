@@ -1,4 +1,4 @@
-package med.vollmed.apiVollMed.direccion;
+package med.vollmed.apiVollMed.domain.direccion;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -24,7 +24,6 @@ public class Direccion {
         this.complemento = direccion.complemento();
     }
 
-
     public Direccion actualizarDatos(DatosDireccion direccion) {
         this.calle = direccion.calle();
         this.distrito = direccion.distrito();
@@ -34,16 +33,7 @@ public class Direccion {
         return this;
     }
 
-//    public Direccion actualizarDatos(Direccion direccion) {
-//        this.calle = direccion.calle();
-//        this.distrito = direccion.distrito();
-//        this.ciudad = direccion.ciudad();
-//        this.numero = direccion.numero();
-//        this.complemento = direccion.complemento();
-//        return this;
-//    }
-
-
+    // Setters and Getters
     public String getCalle() {
         return calle;
     }

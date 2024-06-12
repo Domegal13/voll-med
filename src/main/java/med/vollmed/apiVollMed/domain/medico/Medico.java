@@ -1,4 +1,4 @@
-package med.vollmed.apiVollMed.medico;
+package med.vollmed.apiVollMed.domain.medico;
 
 import jakarta.persistence.*;
 
@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.vollmed.apiVollMed.direccion.Direccion;
+import med.vollmed.apiVollMed.domain.direccion.Direccion;
 
 @Entity(name = "Medico")
 @Table(name = "medicos")
@@ -28,7 +28,6 @@ public class Medico {
     @Embedded
     private Direccion direccion;
 
-
     public Medico(DatosRegistroMedico datosRegistroMedico){
         this.activo = true;
         this.nombre = datosRegistroMedico.nombre();
@@ -37,7 +36,6 @@ public class Medico {
         this.telefono = datosRegistroMedico.telefono();
         this.especialidad = datosRegistroMedico.especialidad();
         this.direccion = new Direccion(datosRegistroMedico.direccion());
-
 
     }
 
@@ -58,9 +56,7 @@ public class Medico {
 
     public void desactivarMedico() {
         this.activo = false;
-    }
-
-
+    }  // para desactivar al medico eliminar
 
     public Long getId() {
         return id;

@@ -1,6 +1,6 @@
-package med.vollmed.apiVollMed.medico;
+package med.vollmed.apiVollMed.domain.medico;
 
-import med.vollmed.apiVollMed.direccion.DatosDireccion;
+import med.vollmed.apiVollMed.domain.direccion.DatosDireccion;
 
 public record DatosRespuestaMedico(
         Long id,

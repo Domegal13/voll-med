@@ -1,8 +1,8 @@
 package med.vollmed.apiVollMed.controllers;
 
 import jakarta.validation.Valid;
-import med.vollmed.apiVollMed.direccion.DatosDireccion;
-import med.vollmed.apiVollMed.medico.*;
+import med.vollmed.apiVollMed.domain.direccion.DatosDireccion;
+import med.vollmed.apiVollMed.domain.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +23,7 @@ public class MedicoController {
 
     @PostMapping
     public ResponseEntity<DatosRespuestaMedico> registrarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico,
-                                          UriComponentsBuilder uriComponentsBuilder) {
+                                                                UriComponentsBuilder uriComponentsBuilder) {
         Medico medico = medicoRepository.save(new Medico(datosRegistroMedico));
         DatosRespuestaMedico datosRespuestaMedico = new DatosRespuestaMedico(medico.getId(), medico.getNombre(),medico.getDocumento(),medico.getEmail(),
                 medico.getTelefono(), medico.getEspecialidad().toString(),
